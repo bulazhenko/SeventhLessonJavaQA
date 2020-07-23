@@ -1,40 +1,38 @@
 package com.customertimes.task4.RemoteDevice;
 
 public class TV extends TVDevice {
-    int chanel = 1;
+    private int chanel = 1;
 
-    public TV() {
-        modelName = "LG";
+    public TV(String modelName) {
+        this.modelName = modelName;
     }
 
     @Override
     public void powerOn() {
         isOn = true;
-        System.out.println("lG TV is ON");
+        System.out.println(modelName + " TV is ON");
     }
 
     @Override
     public void powerOff() {
         isOn = false;
-        System.out.println("LG TV is OFF");
-
+        System.out.println(modelName + " TV is OFF");
     }
 
     @Override
     public void setChannel(int chanel) {
         this.chanel = chanel;
-        System.out.println("Setting chanel to:" + chanel);
+        System.out.println("Setting chanel to: " + chanel);
     }
 
     @Override
     public void currentChannel() {
-        System.out.println("Current chanel:" + chanel);
+        System.out.println("Current chanel: " + chanel);
     }
 
     @Override
     public void upVolume() {
         System.out.println("The volume is up");
-
     }
 
     @Override
@@ -44,7 +42,7 @@ public class TV extends TVDevice {
 
     @Override
     public void mute() {
-        System.out.println("LG TV is muted");
+        System.out.println(modelName + " TV is muted");
     }
 }
 
